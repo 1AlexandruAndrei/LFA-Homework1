@@ -25,13 +25,13 @@ with open("input.txt") as f:
         parts = linie.strip().split()
         if len(parts) == 3:
             state, char, next_state = parts
-            if int(state) not in transitions:
-                transitions[int(state)] = {}
-            transitions[int(state)][char] = int(next_state)
+            if state not in transitions:
+                transitions[state] = {}
+            transitions[state][char] = next_state
 
 #Luam starea intitiala si cea finala
-initial = int(input("Starea initiala este: "))
-final = set(map(int, input("Starea/Starile finale sunt(despartite prin spatiu): ").split()))
+initial = input("Starea initiala este: ")
+final = set(input("Starea/Starile finale sunt(despartite prin spatiu): ").split())
 
 #Cuvantul pe care il avem de verificat
 cuvant = input("Cuvantul pe care vrei sa il verifici prin DFA: ")
