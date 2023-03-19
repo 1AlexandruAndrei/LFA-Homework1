@@ -43,3 +43,4 @@ if accepted:
     print("Starile prin care a trecut: ", states_visited)
 else:
     print("Cuvantul nu este acceptat de DFA.")
+
